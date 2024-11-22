@@ -1,0 +1,30 @@
+<div class="col-lg-6 col-md-12">
+    <div class="card">
+      <div class="card-header card-header-custom4">
+        <h4 class="card-title">Programs List</h4>
+        <p class="card-category">Manage your exercise programs</p>
+      </div>
+      <div class="card-body table-responsive">
+        <table class="table table-hover">
+          <thead class="text-warning">
+            <tr>
+              <th>Number</th>
+              <th>Program Name</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let program of programs; let i = index">
+              <td>{{ i + 1 }}</td>
+              <td>{{ program }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <button (click)="showProgramInput()" class="btn btn-primary">Create New Program</button>
+        <div *ngIf="inputVisible">
+          <input [(ngModel)]="newProgram" placeholder="Enter program name" class="form-control mt-2" />
+          <button (click)="addProgram()" class="btn btn-success mt-2">Add Program</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

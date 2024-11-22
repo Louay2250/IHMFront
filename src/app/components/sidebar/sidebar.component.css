@@ -1,0 +1,16 @@
+/* Remove shadow from active item */
+.nav-item.active .nav-link {
+    background-color: #94b389; /* Light green for active item */
+    color: white; /* White text for contrast */
+    box-shadow: none; /* Remove shadow */
+}
+
+/* Hover effect */
+.nav-item.active .nav-link:hover {
+    background-color: #7b946d; /* Slightly darker green on hover */
+}
+
+/* Ensure padding for all nav-links */
+.nav-link {
+    padding: 10px 15px;
+}

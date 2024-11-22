@@ -1,0 +1,163 @@
+<div class="program-container">
+    <!-- Programs List Section with Blur Effect -->
+    <div class="program-list" [class.blur]="isModalOpen">
+      <div class="card">
+        <div class="card-header card-header-custom4">
+          <h4 class="card-title">Programs List</h4>
+          <p class="card-category">Manage your exercise programs</p>
+        </div>
+        <div class="card-body table-responsive">
+          <table class="table table-hover">
+            <thead class="text-warning">
+              <tr>
+                <th>Number</th>
+                <th>Program Name</th>
+                <th>Start Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let program of programs; let i = index" (click)="selectProgram(program)">
+                <td>{{ i + 1 }}</td>
+                <td>{{ program.name }}</td>
+                <td>{{ program.startDate | date: 'shortDate' }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <button (click)="showProgramInput()" class="btn btn-primary">Create New Program</button>
+          <div *ngIf="inputVisible">
+            <input [(ngModel)]="newProgram" placeholder="Enter program name" class="form-control mt-2" />
+            <button (click)="addProgram()" class="btn btn-success mt-2">Add Program</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Chart Section (No Blur) -->
+    <div class="col-md-6" [class.blur]="isModalOpen">
+      <div class="card card-chart">
+        <div class="card-header card-header-custom2">
+          <div class="ct-chart" id="dailySalesChart1"></div>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title">Weight</h4>
+          <p class="card-category">
+            <span class="text-success"><i class="fa fa-long-arrow-up"></i> 22% </span> increase in today’s sales.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="stats">
+            <i class="material-icons">access_time</i> updated today
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Modal Overlay with Exercise List (No Blur) -->
+    <div *ngIf="isModalOpen" class="modal-overlay">
+        <div class="content-container">
+
+      <!-- Selected Exercises at the Top -->
+      <div class="selected-exercises">
+        <h4>Selected Exercises</h4>
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Sets</th>
+                <th>Reps</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let exercise of selectedExercises">
+                <td>{{ exercise.name }}</td>
+                <td>
+                  <input [(ngModel)]="exercise.sets" type="number" min="1" class="form-control" />
+                </td>
+                <td>
+                  <input [(ngModel)]="exercise.repRange" type="text" class="form-control" placeholder="e.g., 8-12" />
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-primary" (click)="openExerciseDetails(exercise, $event)">
+                      Edit
+                    </button>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+
+      </div>
+      <button (click)="toggleExercisesList()" class="btn">Add Exercises</button>
+
+  
+  
+      <!-- Exercises List -->
+      <div class="exercise-list" *ngIf="showExercisesList">
+        <div *ngFor="let exercise of exercises" class="exercise-card" (click)="selectExercise(exercise)">
+          <img [src]="exercise.image" alt="{{ exercise.name }}">
+          <h3>{{ exercise.name }}</h3>
+        </div>
+      </div>
+      <button (click)="closeModal()" class="close-modal-btn">Close</button>
+
+    </div>
+    </div>
+    <!-- Edit Exercise Modal -->
+    <div *ngIf="isExerciseDetailsModalOpen" class="exercise-details-modal">
+        <div class="exercise-details-container">
+          <!-- Exercise Header -->
+          <div class="exercise-header">
+            <img [src]="activeExercise.image" alt="Exercise" class="exercise-image" />
+            <h4>{{ activeExercise.name }}</h4>
+          </div>
+      
+          <!-- Notes and Rest Option -->
+          <div class="form-group">
+            <label>Add note</label>
+            <textarea [(ngModel)]="activeExercise.note" class="form-control" rows=""></textarea>
+          </div>
+          <div class="form-group">
+            <label for="rest">Rest:</label>
+            <select [(ngModel)]="activeExercise.rest" id="rest" class="form-control">
+              <option value="Off">Off</option>
+              <option value="30s">30s</option>
+              <option value="1m">1m</option>
+              <option value="2m">2m</option>
+            </select>
+          </div>
+      
+          <!-- Editable Sets -->
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Set</th>
+                <th>Weight</th>
+                <th>Repetitions</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let set of activeExercise.sets; let i = index">
+                    <td>{{ i + 1 }}</td>
+                    <td><input [(ngModel)]="set.weight" type="number" class="form-control"></td>
+                    <td><input [(ngModel)]="set.reps" type="number" class="form-control"></td>
+                    <td><button (click)="removeSet(i)" class="btn btn-danger btn-sm">Remove</button></td>
+                  </tr>
+                  
+              </tbody>
+          </table>
+      
+          <!-- Add Set Button -->
+          <button mat-raised-button color="primary" (click)="addRow()">Add</button>      
+          <!-- Save/Cancel Buttons -->
+          <div class="button-group">
+            <button (click)="saveExerciseDetails()" class="btn btn-success">Save</button>
+            <button (click)="closeExerciseDetailsModal()" class="btn btn-secondary">Cancel</button>
+          </div>
+        </div>
+      </div>
+      
+    
+  
+  </div>
+  

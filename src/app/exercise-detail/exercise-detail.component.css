@@ -1,0 +1,23 @@
+.exercise-detail {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  input {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #00cc66;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  

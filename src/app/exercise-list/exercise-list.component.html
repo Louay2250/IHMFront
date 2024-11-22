@@ -1,0 +1,17 @@
+<div class="page-content" [class.blurred]="isModalOpen">
+    <!-- Your main page content here -->
+  
+    <button (click)="openModal()">Show Exercise List</button>
+  </div>
+  
+  <!-- Modal overlay -->
+  <div class="modal-overlay" [class.active]="isModalOpen">
+    <div class="exercise-list">
+      <div *ngFor="let exercise of exercises" class="exercise-card" (click)="selectExercise(exercise)">
+        <img [src]="exercise.image" alt="{{ exercise.name }}">
+        <h3>{{ exercise.name }}</h3>
+      </div>
+      <button (click)="closeModal()" class="close-button">Close</button>
+    </div>
+  </div>
+  

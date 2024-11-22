@@ -1,0 +1,12 @@
+/* Default (Light Mode) */
+body {
+    background-color: #ffffff;
+    color: #000000; /* Optional, adjust text color for light mode */
+  }
+  
+  /* Dark Mode */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff; /* Optional, adjust text color for dark mode */
+  }
+  

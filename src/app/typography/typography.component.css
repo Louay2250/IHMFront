@@ -1,0 +1,15 @@
+.btn-green {
+    background-color: #94b389; /* Green background */
+    color: white; /* White text for contrast */
+    border: none; /* Remove border */
+}
+
+/* Optional: Add hover effect */
+.btn-green:hover {
+    background-color: #7a9e75; /* Darker green on hover */
+}
+
+.card-header-green {
+    background-color: #94b389; /* Green background */
+    color: white; /* White text for contrast */
+}

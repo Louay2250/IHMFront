@@ -1,0 +1,45 @@
+<div class="content">
+    <!-- Loop through each meal type -->
+    <div class="meal-row meal" *ngFor="let meal of meals">
+      <h2>{{ meal.type }}:</h2>
+  
+      <!-- Scrollable container for meal items -->
+      <div class="meal-items-container">
+        <!-- Left arrow button to scroll left -->
+        <button class="arrow-button left" (click)="scrollMealList(meal, 'left')">&#8592;</button>
+  
+        <!-- Meal items container with scroll -->
+        <div class="meal-items">
+          <!-- Loop through each meal item -->
+          <img 
+            *ngFor="let item of meal.items"
+            [src]="item.src"
+            [alt]="item.name"
+            class="meal-item"
+            (click)="openMealModal(item)"
+          />
+        </div>
+  
+        <!-- Right arrow button to scroll right -->
+        <button class="arrow-button right" (click)="scrollMealList(meal, 'right')">&#8594;</button>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- Modal for meal details -->
+  <div class="modal" *ngIf="modalVisible">
+    <div class="modal-content">
+      <span class="close" (click)="closeModal()">&times;</span>
+      <img [src]="selectedMeal.src" alt="Meal Image" />
+      <div class="modal-text">
+        <h2>{{ selectedMeal.name }}</h2>
+        <p>{{ selectedMeal.description }}</p>
+        <h3>Recipe:</h3>
+        <p style="white-space: pre-line;">{{ selectedMeal.recipe }}</p>
+        <p>{{ selectedMeal.nutrition }}</p>
+    </div>
+     </div>
+    </div>
+    
+  

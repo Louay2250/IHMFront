@@ -1,0 +1,140 @@
+.profile-container {
+    font-family: 'Arial', sans-serif;
+    color: #414141;
+    text-align: center;
+    background-color: #fdfbff;
+    padding: 20px;
+    position: relative;
+    height: 800px;
+    display: flex;
+    flex-direction: column; /* Keep content stacked vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: center; /* Center vertically */  
+z-index: 2;
+}
+  
+  .profile-header {
+    margin-bottom: 20px;
+    color: #94b389;
+  }
+  
+  .profile-name {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .separator {
+    border: none;
+    height: 2px;
+    background-color: #94b389;
+    margin: 20px auto;
+    width: 80%;
+  }
+  
+  .profile-block {
+    display: flex;
+    align-items: center; /* Align items to the top of the container */
+    justify-content: flex-start; /* Align items to the left of the container */
+    gap: 50px;
+    margin: 20px 0;
+    text-align: left; /* Align text to the left */
+    width: 75%; /* Make sure it takes full width */
+  }
+  
+  .profile-image img {
+    flex-shrink: 0; /* Prevent the image from shrinking */
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  strong {
+    font-weight: bold;
+    color: #738d6e; /* Change to a green color, or any other color you prefer */
+  }
+  
+  .vertical-line {
+    width: 2px;
+    height: 100%;
+    background-color: #94b389;
+  }
+  
+  .profile-info {
+    display: flex; /* Enable Flexbox */
+    flex-direction: row; /* Arrange child elements side by side */
+    justify-content: space-between;
+    gap: 130px; /* Add some space between the two columns */
+    flex-grow: 0.3; /* This ensures the info section takes up remaining space */
+  }
+  
+  
+  .info-item {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+  align-items: flex-start; /* Align content to the left */
+  margin-bottom: 15px; /* Add space between each .info-item */
+
+  }
+  
+  .profile-summary {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+  
+  .background-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+  }
+  
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .green-circle {
+    background-color: #2ecc71;
+  }
+  
+  .green-circle:nth-child(1) {
+    width: 75px;
+    height: 75px;
+    bottom: 315px;
+    right: 20px;
+    background-color: #767676;
+    z-index: 1;
+
+  }
+  
+  .green-circle:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    top: 100px;
+    left: 30px;
+    background-color: #738d6e;
+    z-index: 1;
+  }
+
+  .green-circle:nth-child(3) {
+    width: 1000px;
+    height: 1000px;
+    top: -550px;
+    right: -530px;
+    background-color: #94b38945;
+
+  }
+
+  .green-circle:nth-child(4) {
+    width: 300px;
+    height: 300px;
+    top: 650px;
+    left: -150px;
+    background-color: #94b38945;
+  }
+
+  

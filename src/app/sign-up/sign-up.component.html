@@ -1,0 +1,95 @@
+<div class="back" [ngStyle]="{'font-size': currentFontSize}">
+    <div class="signup-container">
+      <header class="header">
+        <img src="assets/img/logo.jpg" alt="App Logo" class="logo">
+        <h1>Create Your Free Account</h1>
+        <div class="settings">
+          <!-- Dark Mode Toggle -->
+            <label for="darkModeToggle">Dark Mode:</label>
+            <input type="checkbox" id="darkModeToggle" [checked]="darkMode" (change)="toggleDarkMode($event)">
+
+        
+          <!-- Font Size Toggle -->
+        </div>
+      </header>
+    
+        <form>
+        <div class="form-group">
+            <div class="floating-label">
+            <input type="text" id="firstName" placeholder="" required  [ngStyle]="{'font-size': currentFontSize}">
+            <label for="firstName"  [ngStyle]="{'font-size': currentFontSize}">First Name</label>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <div class="floating-label">
+            <input type="email" id="email" placeholder="" required>
+            <label for="email"  [ngStyle]="{'font-size': currentFontSize}">Email Address</label>
+            </div>
+        </div>
+    
+        <div class="form-group">
+            <div class="floating-label">
+              <input type="password" id="password" [(ngModel)]="password" placeholder="" required>
+              <label for="password"  [ngStyle]="{'font-size': currentFontSize}">Password</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="floating-label">
+              <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" (input)="validatePassword()" placeholder="" required>
+              <label for="confirmPassword"  [ngStyle]="{'font-size': currentFontSize}">Confirm Password</label>
+            </div>
+            <span id="confirmFeedback" class="feedback" [ngClass]="{ 'valid': passwordsMatch, 'invalid': !passwordsMatch && confirmPassword !== '' }">
+              {{ feedbackMessage }}
+            </span>
+          </div>
+          
+    
+        <!-- Separator between the two sections -->
+        <hr class="separator">
+    
+        <div class="profile-details">
+            <h1>Profile Details</h1>
+    
+            <div class="form-group">
+            <label>Sex:</label>
+            <div class="radio-group">
+                <div class="radio-container">
+                <input type="radio" id="male" name="sex" value="male">
+                <label for="male"  [ngStyle]="{'font-size': currentFontSize}">Male</label>
+                </div>
+                <div class="radio-container">
+                <input type="radio" id="female" name="sex" value="female">
+                <label for="female"  [ngStyle]="{'font-size': currentFontSize}">Female</label>
+                </div>
+            </div>
+            </div>
+    
+            <div class="form-group">
+            <div class="floating-label">
+                <input type="date" id="birthday" required>
+                <label for="birthday"  [ngStyle]="{'font-size': currentFontSize}">Birthday</label>
+            </div>
+            </div>
+    
+            <div class="form-group">
+            <div class="floating-label">
+                <input type="number" id="heightFeet" placeholder="" required>
+                <label for="heightFeet"  [ngStyle]="{'font-size': currentFontSize}">Height (ft)</label>
+            </div>
+            </div>
+    
+            <div class="form-group">
+            <div class="floating-label">
+                <input type="number" id="weight" placeholder="" required>
+                <label for="weight"  [ngStyle]="{'font-size': currentFontSize}">Weight (KG)</label>
+            </div>
+            </div>
+    
+        </div>
+    
+        <button type="submit" class="signup-button" (click)="goToDashboard()"  [ngStyle]="{'font-size': currentFontSize}">Sign Up</button>
+        </form>
+    </div>
+</div>

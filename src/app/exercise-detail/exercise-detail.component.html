@@ -1,0 +1,11 @@
+<div class="exercise-detail">
+    <h2>{{ exercise.name }}</h2>
+    <div *ngFor="let set of sets; index as i">
+      <label>Set {{ i + 1 }}</label>
+      <input type="number" placeholder="Reps" [(ngModel)]="set.reps" />
+      <input type="number" placeholder="Weight" [(ngModel)]="set.weight" />
+    </div>
+    <button (click)="addSet()">+ Ajouter une série</button>
+    <button (click)="saveExercise()">Enregistrer</button>
+  </div>
+  

@@ -1,0 +1,44 @@
+.button-group-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allows buttons to wrap if needed */
+    gap: 5px; /* Adds space between buttons */
+  }
+  
+  .button-group-flex .btn {
+    background-color: #94b389;
+    flex: 1; /* Ensures buttons take equal space */
+    max-width: calc(33.33% - 10px); /* Restricts button width */
+    font-size: 10px; /* Adjust text size for smaller buttons */
+    padding: 12px 2px; /* Reduce button padding */
+    text-align: center; /* Centers button text */
+  }
+  :root {
+    --font-size: 16px; // Default font size
+  }
+  
+  body {
+    font-size: var(--font-size);
+  }
+  
+  * {
+    font-size: inherit; /* Ensure all elements inherit from the body */
+  }
+  
+  
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background color */
+    color: white; /* White font color */
+  }
+  
+  body.dark-mode .card {
+    background-color: #333; /* Grey background for all cards */
+  }
+  
+  body.dark-mode .card-text,
+  body.dark-mode .card-title {
+    color: white; /* White font color for text inside all cards */
+  }
+  
+  

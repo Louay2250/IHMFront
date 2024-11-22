@@ -1,0 +1,79 @@
+.footer {
+    background-color: #94b38900;
+    color: #000000;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 10px;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1 1 200px;
+    padding: 10px;
+  }
+  
+  .footer-section h4 {
+    font-size: 18px;
+    color: #94b389; /* Match the button color */
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p,
+  .footer-section ul {
+    line-height: 1.8;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #94b389;
+  }
+  
+  .social-icons {
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(2, 50px); /* Two columns */
+    gap: 20px 0px; /* Row and column gaps */
+    justify-content: center; /* Centers the icons horizontally */
+    align-items: center; /* Centers the icons vertically */
+}
+
+.social-icons a {
+    font-size: 25px;
+    color: #717171;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #94b389;
+}
+
+  
+  .social-icons a:hover {
+    color: #000000;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #000000;
+    padding-top: 15px;
+    color: #000000;
+  }
+  

@@ -1,0 +1,301 @@
+/* Program Container */
+.program-container {
+    padding: 20px;
+}
+.program-container.blur-background {
+    filter: blur(5px);
+}
+
+/* Card Layout */
+.card-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card-row .col-lg-6,
+.card-row .col-md-6 {
+    flex: 1 1 45%;
+}
+
+.card {
+    margin-top: 70px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Card Header Customization */
+.card-header-custom4 {
+    background-color: #5b7a54;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-header-custom2 {
+    background-color: #94b389;
+    color: #fff;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Table Column Headers */
+.table th {
+    color: #94b389;
+    text-align: left;
+}
+
+/* Button Customization */
+.btn-primary {
+    background-color: #787878;
+    border-color: #94b389;
+}
+.btn-primary:hover {
+    background-color: #94b389;
+    border-color: #ffffff;
+}
+
+.btn-success {
+    background-color: #787878;
+    border-color: #94b389;
+}
+.btn-success:hover {
+    background-color: #94b389;
+    border-color: #ffffff;
+}
+
+/* Input Field Customization */
+input.form-control {
+    border-color: #94b389;
+}
+input.form-control:focus {
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Modal Styling */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+/* Blurred Background Effect */
+.blur {
+    filter: blur(5px);
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    width: 100%;
+    max-width: 850px; /* Limit the modal width */
+    margin: 0 auto;
+  }
+
+/* Modal Overlay for Exercise List */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: row;
+    align-items: center;
+    padding: 20px;
+    z-index: 1000;
+}
+
+/* Exercise List */
+.exercise-list {
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+    max-height: 300px; /* Limit the modal width */
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;    /* Enable vertical scrolling */
+
+}
+
+.exercise-card {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.exercise-card img {
+    width: 140px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Close Button */
+.close-modal-btn {
+    top: 20px;
+    right: 20px;
+    background-color: #787878;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Selected Exercises Section */
+.selected-exercises {
+    background-color: #f4f4f9;  /* Light background color */
+    padding: 15px;
+    border-radius: 8px;         /* Optional: round the corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Optional: add a subtle shadow */
+    margin-bottom: 20px;        /* Optional: add spacing from the bottom */
+    max-height: 350px; /* Limit the modal width */
+    flex-wrap: wrap;     /* Allow wrapping if necessary */
+    overflow-y: auto;    /* Enable vertical scrolling */
+  }
+  
+  .selected-exercises ul {
+    list-style-type: none;  /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .selected-exercises li {
+    font-size: 16px;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;  /* Optional: add a line between exercises */
+  }
+  
+  .selected-exercises li:last-child {
+    border-bottom: none;  /* Remove the line from the last item */
+  }
+
+  /*changes for the editing seleected exercice */
+
+  /* Modal Overlay */
+.exercise-details-modal {
+    position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  }
+  
+  .exercise-details-container {
+    background: #1c1c1c;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    max-width: 90%;
+  }
+  
+  .exercise-details-container h4 {
+    margin-bottom: 20px;
+  }
+
+  .exercise-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .exercise-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin-right: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row; /* Stack elements vertically */
+  }
+
+  textarea.form-control {
+    resize: none;
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 4px;
+  }
+  
+  .btn {
+    margin-right: 10px;
+  }
+
+  .table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+  }
+
+  .table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+}
+
+
+
+.table input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button-group .btn {
+  margin-left: 10px;
+}

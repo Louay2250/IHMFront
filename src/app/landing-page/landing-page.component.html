@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriTrack Landing Page</title>
+  <link rel="stylesheet" href="landing-page.component.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="assets/img/logo.jpg" alt="NutriTrack Logo">
+        <span>NutriTrack</span>
+      </div>
+      <ul>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Forums</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+      <button class="login-btn" (click)="goToSignin()">LOG IN</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Eat smarter.<br>Live better.</h1>
+        <p>Track your diet, exercise, and health data.</p>
+        <button class="signup-btn" (click)="goToSignup()">Sign Up – It's Free!</button>
+    </div>
+      <div class="hero-image">
+        <img src="assets/img/healthy.avif" alt="Healthy Person">
+    </div>
+    </section>
+    
+  </main>
+</body>
+</html>

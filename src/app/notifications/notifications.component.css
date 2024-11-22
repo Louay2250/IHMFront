@@ -1,0 +1,146 @@
+  /* Appointment Section */
+  .appointment-section {
+    background: #738d6e54;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  
+  .left-panel{
+    padding: 20px;
+    width: 50%;
+    height: 45%;
+    background-color: #f0f0f000;
+  }
+  .right-panel {
+    width: 45%;
+  }
+  
+  .left-panel h2 {
+    font-size: 28px;
+  }
+  
+  .left-panel p {
+    margin: 15px 0;
+  }
+  
+  .buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .learn-more {
+    background: #94b389;
+    color: white;
+  }
+  
+  .get-doctor {
+    background: #5b7a54;
+    color: white;
+  }
+  
+  .right-panel form {
+    background: #80997b;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 10px; /* Space between the two date fields */
+    width: 100%; /* Ensures the container spans full width */
+    margin: 10px 0;
+  }
+  .label{
+    color: black;
+  }
+  
+  input,
+  textarea,
+  select {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    height: 80px;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    background: #757575;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Icons Section */
+  .icons-section {
+    margin-top: -130px;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    padding: 20px;
+    background: #738d6e00;
+  }
+  
+  .icon {
+    text-align: center;
+  }
+  
+  .icon img {
+    width: 80px;
+    height: 80px;
+  }
+  
+
+  /* Floating label container */
+.floating-label {
+    position: relative;
+    flex: 1; /* Each date input takes equal width */
+}
+
+/* Input fields */
+.floating-label input {
+    border: none;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    padding: 8px 0;
+    font-size: var(--input-font-size, 16px); /* Dynamic font size */
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Green bottom border when input is focused */
+.floating-label input:focus {
+    border-bottom-color: #000000;
+}
+
+/* Placeholder label styling */
+.floating-label label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    font-weight: bold; /* Make the font bold */
+    color: #393939 !important;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+/* Floating label effect when input is focused or has text */
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+    top: -16px;
+    font-size: 12px;
+    color: #94b389;
+}

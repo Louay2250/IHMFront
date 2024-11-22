@@ -1,0 +1,17 @@
+.card-header-custom4 {
+    background-color: #f4a261;
+    color: white;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f6f8fa;
+  }
+  
+  .btn-primary {
+    margin-top: 10px;
+  }
+  
+  .mt-2 {
+    margin-top: 10px;
+  }
+  
